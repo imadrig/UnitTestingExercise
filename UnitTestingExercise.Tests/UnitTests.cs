@@ -53,28 +53,40 @@ namespace UnitTestingExercise.Tests
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(7, 5, 35)]//Add test data <-------
+        [InlineData(2, 3, 6)]
+        [InlineData(4, 7, 28)]
+        [InlineData(3, -1, -3)]
         public void MultiplyTest(int num1, int num2, int expected)
         {
             //Start Step 7 here:
 
-            //Arrange
+            //Arrange - DONE
+            Calculator calcMultiply = new Calculator();
 
-            //Act
+            //Act - DONE
+            var actual = calcMultiply.Multiply(num1, num2);
 
             //Assert
+            Assert.Equal(expected, actual);
 
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(9, 3, 3)]//Add test data <-------
+        [InlineData(2, 4, .5)]
+        [InlineData(-2, 1, -2)]
+        [InlineData(3, -1, -3)]
         public void DivideTest(int num1, int num2, int expected)
         {
-            //Arrange
+            //Arrange - DONE
+            Calculator calcDivide = new Calculator();
 
-            //Act
+            //Act - DONE
+            var actual = calcDivide.Divide(num1, num2);
 
-            //Assert
+            //Assert - DONE
+            Assert.Equal(expected, actual);
 
         }
 
